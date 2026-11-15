@@ -1,0 +1,260 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFF9FC;
+    color: #51445E;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #FCE7F3;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #A85583;
+}
+
+nav a {
+    text-decoration: none;
+    color: #76546F;
+    margin-left: 22px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #D94691;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 380px;
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+        120deg, #FCE7F3, #EDE9FE, #FEF3C7
+    );
+}
+
+.tagline {
+    color: #B45D91;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin: 18px 0;
+    color: #684A70;
+}
+
+.hero p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.hero-icon {
+    font-size: 130px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: #D98BB7;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.main-btn:hover {
+    background: #B96B9A;
+}
+
+/* Library */
+.library-section,
+.favourites-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    color: #8B5C91;
+}
+
+.subtitle {
+    margin: 12px 0 25px;
+    color: #927F97;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 550px;
+    padding: 15px;
+    border: 2px solid #EAD5EB;
+    border-radius: 25px;
+    outline: none;
+    font-size: 15px;
+    background: white;
+}
+
+#searchInput:focus {
+    border-color: #C084FC;
+}
+
+/* Categories */
+.categories {
+    margin: 25px 0;
+}
+
+.category {
+    padding: 10px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background: #EDE9FE;
+    color: #765A91;
+    cursor: pointer;
+}
+
+.category.active,
+.category:hover {
+    background: #D98BB7;
+    color: white;
+}
+
+/* Book Cards */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(210px, 1fr)
+    );
+    gap: 25px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.book-card {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #E8DCEB;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-7px);
+}
+
+.book-cover {
+    height: 145px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    color: #76527F;
+    margin-bottom: 8px;
+}
+
+.book-card p {
+    color: #927F97;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.book-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.book-actions button,
+.book-actions a {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 18px;
+    background: #FCE7F3;
+    color: #A34D83;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.book-actions button:hover,
+.book-actions a:hover {
+    background: #EDE9FE;
+}
+
+.empty-message {
+    color: #927F97;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Favourites */
+.favourites-section {
+    background: #FDF0F7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #EDE9FE;
+    color: #765A91;
+    line-height: 2;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-icon {
+        font-size: 90px;
+        margin-top: 25px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+}
